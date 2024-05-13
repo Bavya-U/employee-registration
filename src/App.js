@@ -1,11 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import EmpForm from './Pages/EmpRegistrationForm/EmpForm';
+import Layout from "./Component/Layout/Layout"
+import EmpTable from './Pages/EmpRegistrationTable/EmpTable';
+import EmpUpdate from './Pages/EmpRegistrationUpdate/EmpUpdate';
 
 function App() {
   return (
-    <div>
-      <p>employee Registration</p>
-    </div>
+    <BrowserRouter>
+      <Layout/>
+        <Routes>
+        <Route path="/" element={<EmpForm />} />
+        <Route path="/emptable" element={<EmpTable />} />
+        <Route path="/update/:id" element={<EmpUpdate />} />
+        </Routes>
+     
+    </BrowserRouter>
   );
 }
 
