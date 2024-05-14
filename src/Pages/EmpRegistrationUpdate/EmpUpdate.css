@@ -1,0 +1,22 @@
+.empform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empform-outer{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.empfrom-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empform-inner{
+    border-radius: 0.5rem;
+                            border: 2px solid #ced4da;
+                            padding: 0.5rem 1rem;
+                              font-size: 1rem;
+                            margin-top:9px;
+}

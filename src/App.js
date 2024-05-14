@@ -6,11 +6,14 @@ import EmpForm from './Pages/EmpRegistrationForm/EmpForm';
 import Layout from "./Component/Layout/Layout"
 import EmpTable from './Pages/EmpRegistrationTable/EmpTable';
 import EmpUpdate from './Pages/EmpRegistrationUpdate/EmpUpdate';
+import "./App.css"
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout/>
+     <Layout/>
         <Routes>
         <Route path="/" element={<EmpForm />} />
         <Route path="/emptable" element={<EmpTable />} />
@@ -18,8 +21,8 @@ function App() {
         <Route path='/edit'element={<EmpUpdate/>}></Route>
         <Route path="/form/:id/edit" element={<EmpUpdate />    }/>
 
-        </Routes>
-     
+      </Routes>
+      <ToastContainer />
     </BrowserRouter>
   );
 }
