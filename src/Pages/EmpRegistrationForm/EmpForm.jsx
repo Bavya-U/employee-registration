@@ -57,11 +57,22 @@ const handleSubmit = async (e) => {
     }
   };
   return (
-    <div className="container  empform  mt-2 ">
-          <form onSubmit={handleSubmit} className="Form-card-css card border-0 shadow-lg w-50 p-3">
+    <div className="container-fluid  empform empform-container">
+       
+      <form onSubmit={handleSubmit} className="Form-card-css w-50 p-3">
+      {/* <div className="spinner-container" style={{ display: isLoading ? "flex" : "none" }}>
+      <div className="spinner-border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    </div> */}
+         <div id="loading-indicator" style={{ display: isLoading ? "flex" : "none" }}>
+      <div className="lds-hourglass">
+      </div>
+        </div>
+       
         <div className=" d-flex empform-outer">
           <div className="col-md-5 me-3 m-2">
-            <label  className="fw-bold">
+            <label  className="fw-bold empform-lable">
               Emp Code <span className="text-danger">*</span> :
             </label>
             <input
@@ -75,7 +86,7 @@ const handleSubmit = async (e) => {
             />
           </div>
           <div className="col-md-5 ms-3 m-2">
-            <label  className="fw-bold">
+            <label  className="fw-bold empform-lable">
               FirstName <span className="text-danger">*</span> :
             </label>
             <input
@@ -90,7 +101,7 @@ const handleSubmit = async (e) => {
         </div>
         <div className="d-flex empform-outer">
           <div className="col-md-5 me-3 m-2">
-            <label  className="fw-bold">
+            <label  className="fw-bold empform-lable">
               LastName <span className="text-danger">*</span> :
             </label>
             <input
@@ -104,7 +115,7 @@ const handleSubmit = async (e) => {
           </div>
 
           <div className="col-md-5 ms-3 m-2">
-            <label  className="fw-bold">
+            <label  className="fw-bold empform-lable">
               Email <span className="text-danger">*</span> :
             </label>
             <input
@@ -120,7 +131,7 @@ const handleSubmit = async (e) => {
 
         <div className="d-flex empform-outer">
         <div className="col-md-5 me-3 m-2">
-  <label  className="fw-bold">
+  <label  className="fw-bold empform-lable">
     Role <span className="text-danger">*</span> :
   </label>
   <select
@@ -136,7 +147,7 @@ const handleSubmit = async (e) => {
 </div>
 
                   <div className="col-md-5 ms-3 m-2">
-  <label  className="fw-bold">
+  <label  className="fw-bold empform-lable">
     Department <span className="text-danger">*</span> :
   </label>
   <select
@@ -156,7 +167,7 @@ const handleSubmit = async (e) => {
 
         <div className="d-flex empform-outer">
           <div className="col-md-5 me-3 m-2">
-            <label  className="fw-bold">
+            <label  className="fw-bold empform-lable">
               Date Of Birth <span className="text-danger">*</span> :
             </label>
             <input
@@ -169,7 +180,7 @@ const handleSubmit = async (e) => {
             />
           </div>
                   <div className="col-md-5 ms-3 m-2">
-  <label  className="fw-bold">
+  <label  className="fw-bold empform-lable">
     Gender <span className="text-danger">*</span> :
   </label>
   <select
@@ -188,7 +199,7 @@ const handleSubmit = async (e) => {
 
         <div className=" empform-outer">
           <div className="col-md-5 me-3 m-2 ">
-            <label  className="fw-bold">
+            <label  className="fw-bold empform-lable">
               Phone Number <span className="text-danger">*</span> :
             </label>
             <input
@@ -201,7 +212,7 @@ const handleSubmit = async (e) => {
             />
           </div>
           <div className="col-md-5 ms-3 m-2">
-  <label  className="fw-bold">
+  <label  className="fw-bold empform-lable">
     Address <span className="text-danger">*</span> :
   </label>
   <textarea
@@ -217,14 +228,7 @@ const handleSubmit = async (e) => {
               </div>
             
               <div className="empfrom-btn mt-2">
-          <button className="btn btn-primary" type="submit" disabled={isLoading}>
-            {isLoading ? (
-              <div className="spinner-border text-light" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-            ) : (
-              "Add User"
-            )}
+          <button className="btn btn-primary" type="submit" >Add User
           </button>
         </div>
       </form>

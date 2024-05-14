@@ -10,7 +10,7 @@ function Layout() {
   };
 
   return (
-    <nav className="navbars">
+    <nav className="navbars container-fluid">
       <button className="toggle-button" onClick={toggleNavbar}>
         <FaBars />
       </button>
@@ -20,9 +20,12 @@ function Layout() {
         <div  className='navbar-left'>
             <img className='logo ' src={logo} alt="" />
             <h5 className='nav-para fw-bold'>Employee Registration</h5>
-      </div>
+          </div>
+          <li className="nav-items">
+          <a href="/" className="nav-links">Home</a>
+        </li>
         <li className="nav-items">
-          <a href="/" className="nav-links">EmpFrom</a>
+          <a href="/empform" className="nav-links">EmpFrom</a>
         </li>
         <li className="nav-items">
           <a href="/emptable" className="nav-links">EmpTable</a>

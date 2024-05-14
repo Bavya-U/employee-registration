@@ -4,3 +4,20 @@
 .emptable-datadiv{
     border-radius: 50px;
 }
+body {
+    background-image: url('../../Component//Asserts/regimagge.jpg'); 
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (last parameter) to make the background color more or less transparent */
+    background-blend-mode: overlay; /* Blend the background image and color */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 91vh;
+  }
+  
+  .Form-card-css {
+    background-color: rgba(197, 196, 196, 0.8); 
+    border-radius: 30px;
+  }
+  .emptable-data{
+    border-radius: 20px;
+  }

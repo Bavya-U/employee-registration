@@ -30,6 +30,8 @@ const ReduxTable = () => {
     deleteTarget: null,
   });
   const [globalSearchText, setGlobalSearchText] = useState("");
+ 
+
   
 
 
@@ -38,6 +40,7 @@ const ReduxTable = () => {
   }, [dispatch]);
 
   const handleEditClick = (id) => {
+    
     navigate(`/form/${id}/edit`);
   };
 
@@ -138,9 +141,10 @@ const ReduxTable = () => {
   return (
     <div className="text-center col-10 mx-auto  mt-2">
       <div className="d-md-flex border shadow justify-content-between bg-white shadow emptable-div p-3 my-3">
+      
         <div className="d-flex justify-content-center">
           <div>
-            <Link to="/">
+            <Link to="/empform">
               <Button className="p-button p-button-success  me-2">
                 <FaPlus className="me-2" />
                 <span>New</span>
@@ -190,9 +194,9 @@ const ReduxTable = () => {
           value={filteredData}
           paginator
           header={header}
-          rows={5}
-          className="card shadow mb-5 border-0"
-          rowsPerPageOptions={[5, 10, 25, 50]}
+          rows={4}
+          className="card shadow mb-5 emptable-data border-0"
+          rowsPerPageOptions={[4, 5, 10, 20]}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} products"
           columnResizeMode="expand"

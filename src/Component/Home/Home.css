@@ -1,0 +1,9 @@
+.home-background {
+    background-image: url('../../Component//Asserts/registration.jpg'); 
+    background-color: rgba(98, 98, 98, 0.5);
+    background-blend-mode: overlay; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 91vh;
+  }

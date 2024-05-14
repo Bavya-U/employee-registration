@@ -15,8 +15,119 @@
 }
 .empform-inner{
     border-radius: 0.5rem;
-                            border: 2px solid #ced4da;
-                            padding: 0.5rem 1rem;
-                              font-size: 1rem;
-                            margin-top:9px;
+    border: 2px solid #868686;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top:9px;
+                           
 }
+.empform-lable{
+    /* color: white;
+    font-weight: 500; */
+}
+/* .empform-container {
+    background-image: url('../../Component//Asserts/regimagge.jpg'); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: overlay; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 91vh;
+  }
+  
+  .Form-card-css {
+    background-color: rgba(197, 196, 196, 0.8); 
+    border-radius: 30px;
+  }
+  .spinner-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   */
+
+   .empform-container {
+    background-image: url('../../Component//Asserts/background.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Form-card-css {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+  }
+    /* .spinner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+  }
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    } */
+  
+
+    #loading-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.5);
+        /* background: white; */
+        z-index: 999;
+      }
+      
+      .lds-hourglass {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      
+      .lds-hourglass:after {
+        content: " ";
+        display: block;
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        margin: 6px;
+        box-sizing: border-box;
+        border: 26px solid #333;
+        border-color: rgb(75, 73, 70) transparent rgb(75, 73, 70) transparent; 
+        animation: lds-hourglass 1.2s infinite;
+      }
+      
+      @keyframes lds-hourglass {
+        0% {
+          transform: rotate(0);
+          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        50% {
+          transform: rotate(900deg);
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        100% {
+          transform: rotate(1800deg);
+        }
+      }
+  
+  

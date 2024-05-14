@@ -9,13 +9,15 @@ import EmpUpdate from './Pages/EmpRegistrationUpdate/EmpUpdate';
 import "./App.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import Home from "./Component/Home/Home"
 
 function App() {
   return (
     <BrowserRouter>
      <Layout/>
         <Routes>
-        <Route path="/" element={<EmpForm />} />
+        <Route path="/empform" element={<EmpForm />} />
+        <Route path="/" element={<Home />} />
         <Route path="/emptable" element={<EmpTable />} />
         {/* <Route path="/update/:id" element={<EmpUpdate />} /> */}
         <Route path='/edit'element={<EmpUpdate/>}></Route>
