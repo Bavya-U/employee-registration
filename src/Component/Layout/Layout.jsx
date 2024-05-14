@@ -10,19 +10,19 @@ function Layout() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbars">
       <button className="toggle-button" onClick={toggleNavbar}>
         <FaBars />
       </button>
-      <ul className={isOpen ? "navbar-nav active" : "navbar-nav"}>
-        <li className="nav-item">
-          <a href="/" className="nav-link">EmpFrom</a>
+      <ul className={isOpen ? "navbar-navs active" : "navbar-navs"}>
+        <li className="nav-items">
+          <a href="/" className="nav-links">EmpFrom</a>
         </li>
-        <li className="nav-item">
-          <a href="/emptable" className="nav-link">EmpTable</a>
+        <li className="nav-items">
+          <a href="/emptable" className="nav-links">EmpTable</a>
         </li>
-        <li className="nav-item">
-          <a href="/update" className="nav-link">EmpUpdate</a>
+        <li className="nav-items">
+          <a href="/update" className="nav-links">EmpUpdate</a>
         </li>
       
       </ul>

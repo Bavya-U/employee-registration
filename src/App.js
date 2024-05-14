@@ -1,4 +1,6 @@
 import React from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import EmpForm from './Pages/EmpRegistrationForm/EmpForm';
 import Layout from "./Component/Layout/Layout"
@@ -12,7 +14,10 @@ function App() {
         <Routes>
         <Route path="/" element={<EmpForm />} />
         <Route path="/emptable" element={<EmpTable />} />
-        <Route path="/update/:id" element={<EmpUpdate />} />
+        {/* <Route path="/update/:id" element={<EmpUpdate />} /> */}
+        <Route path='/edit'element={<EmpUpdate/>}></Route>
+        <Route path="/form/:id/edit" element={<EmpUpdate />    }/>
+
         </Routes>
      
     </BrowserRouter>

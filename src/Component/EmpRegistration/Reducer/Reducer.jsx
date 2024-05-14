@@ -1,40 +1,47 @@
-import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, GET_ITEM, UPDATE_ITEM } from '../Type/Type';
+// reducer.js
+import {
+  CREATE_USER,
+  UPDATE_USER,
+  DELETE_USER,
+  FETCH_USERS,
+  FETCH_USER,
+} from "../Type/Type";
 
 const initialState = {
-  items: [],
-  item: {}
+  users: [],
+  user: null,
 };
 
-const itemReducer = (state = initialState, action) => {
-  switch(action.type) {
-    case GET_ITEMS:
+const userReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CREATE_USER:
       return {
         ...state,
-        items: action.payload
+        users: [...state.users, action.payload],
       };
-    case GET_ITEM:
+    case UPDATE_USER:
       return {
         ...state,
-        item: action.payload
+        user: action.payload, // Update the user state with the updated user data
       };
-    case ADD_ITEM:
+    case DELETE_USER:
       return {
         ...state,
-        items: [...state.items, action.payload]
+        users: state.users.filter((user) => user.id !== action.payload),
       };
-    case UPDATE_ITEM:
+    case FETCH_USERS:
       return {
         ...state,
-        item: action.payload
+        users: action.payload,
       };
-    case DELETE_ITEM:
+    case FETCH_USER:
       return {
         ...state,
-        items: state.items.filter(item => item.id !== action.payload)
+        user: action.payload,
       };
     default:
       return state;
   }
 };
 
-export default itemReducer;
+export default userReducer;

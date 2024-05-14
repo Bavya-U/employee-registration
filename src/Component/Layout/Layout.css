@@ -1,10 +1,10 @@
-.navbar {
+.navbars {
     background-color: #6b6969;
     overflow: hidden;
     padding: 6px;
   }
   
-  .navbar-nav {
+  .navbar-navs {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -13,11 +13,11 @@
     justify-content: center;
   }
   
-  .nav-item {
+  .nav-items {
     float: left;
   }
   
-  .nav-link {
+  .nav-links {
     display: block;
     color: white;
     text-align: center;
@@ -28,16 +28,16 @@
     display: none;
   }
   @media screen and (max-width: 800px) {
-    .navbar-nav {
+    .navbar-navs {
       flex-direction: column;
       display: none;
     }
   
-    .navbar-nav.active {
+    .navbar-navs.active {
       display: flex;
     }
   
-    .nav-item {
+    .nav-items {
       width: 100%;
     }
   
