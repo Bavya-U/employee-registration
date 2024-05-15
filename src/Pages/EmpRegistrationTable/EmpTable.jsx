@@ -80,17 +80,20 @@ const ReduxTable = () => {
         doc.autoTable({
           head: [
             [
-              "Name",
-              "E-mail",
-              "Phone",
-              "Password",
-              "Confirm Password",
-              "Language",
-              "Gender",
+              "empid",
+              "name",
+              "lastname",
+              "email",
+              "phoneNumber",
+              "address",
+              "jobrole",
+              "department",
               "Date of Birth",
+              "gender"
             ],
           ],
           body: filteredData.map((row) => [
+            row.empid,
             row.name,
             row.lastname,
             row.email,
@@ -99,7 +102,6 @@ const ReduxTable = () => {
             row.jobrole,
             row.department,
             row.doj,
-            row.empid,
             row.gender,
           ]),
         });

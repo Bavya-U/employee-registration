@@ -45,6 +45,9 @@
     padding: 14px 16px;
     text-decoration: none;
   }
+  .nav-links:hover{
+    color: rgb(124, 227, 222);
+  }
   .toggle-button{
     display: none;
   }
