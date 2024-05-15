@@ -8,8 +8,6 @@ import {
 } from "../Type/Type";
 import { BASE_URL } from "../../Services/Api";
 
-
-
 export const createUser = (user) => {
   return async (dispatch) => {
     try {

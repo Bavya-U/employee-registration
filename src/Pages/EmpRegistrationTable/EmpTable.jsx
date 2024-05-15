@@ -30,17 +30,12 @@ const ReduxTable = () => {
     deleteTarget: null,
   });
   const [globalSearchText, setGlobalSearchText] = useState("");
- 
-
-  
-
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
   const handleEditClick = (id) => {
-    
     navigate(`/form/${id}/edit`);
   };
 
@@ -89,7 +84,7 @@ const ReduxTable = () => {
               "jobrole",
               "department",
               "Date of Birth",
-              "gender"
+              "gender",
             ],
           ],
           body: filteredData.map((row) => [
@@ -143,7 +138,6 @@ const ReduxTable = () => {
   return (
     <div className="text-center col-10 mx-auto  mt-2">
       <div className="d-md-flex border shadow justify-content-between bg-white shadow emptable-div p-3 my-3">
-      
         <div className="d-flex justify-content-center">
           <div>
             <Link to="/empform">

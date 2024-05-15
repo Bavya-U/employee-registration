@@ -4,6 +4,7 @@ import { createUser } from "../../Component/EmpRegistration/Action/Action";
 import { useNavigate } from "react-router-dom";
 import "./EmpForm.css";
 
+
 const EmpForm = () => {
   const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -16,7 +17,6 @@ const EmpForm = () => {
   const [empid, setEmpId] = useState("");
   const [gender, setGender] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
   const dispatch = useDispatch();
   const nav = useNavigate();
 
@@ -220,7 +220,7 @@ const EmpForm = () => {
 
         <div className="empfrom-btn mt-2">
           <button className="btn btn-primary" type="submit">
-            Add User
+            Register
           </button>
         </div>
       </form>

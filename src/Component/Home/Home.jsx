@@ -14,16 +14,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-
-
-
-
-// spinner in bootstrap
-//  {/* <div className="spinner-container" style={{ display: isLoading ? "flex" : "none" }}>
-//       <div className="spinner-border" role="status">
-//         <span className="visually-hidden">Loading...</span>
-//       </div>
-//     </div> */}
