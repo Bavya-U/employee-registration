@@ -76,7 +76,7 @@ const EmpUpdate = () => {
         setEmpId("");
         setGender("");
 
-        nav("/emptable");
+        nav("/employee/view");
       }
     } catch (error) {
       console.error("Error:", error);

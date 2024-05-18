@@ -9,8 +9,8 @@
 }
 .empfrom-btn{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
 }
 .empform-inner{
     border-radius: 0.5rem;
@@ -20,7 +20,7 @@
     margin-top:9px;
                            
 }
-   .empform-container {
+   /* .empform-container {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,12 +29,12 @@
     align-items: center;
     justify-content: center;
   }
-  
+   */
   .Form-card-css {
-    background-color: rgba(255, 255, 255, 0.6); 
+    /* background-color: rgba(255, 255, 255, 0.6);  */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 50px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease; 
   }
     

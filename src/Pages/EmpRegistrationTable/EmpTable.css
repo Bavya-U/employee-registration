@@ -4,7 +4,7 @@
 .emptable-datadiv{
     border-radius: 50px;
 }
-body {
+/* body {
     background-image: url('../../Component//Asserts/regimagge.jpg'); 
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
@@ -12,10 +12,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 91vh;
-  }
+  } */
   
   .Form-card-css {
-    background-color: rgba(197, 196, 196, 0.8); 
+    /* background-color: rgba(197, 196, 196, 0.8);  */
     border-radius: 30px;
   }
   .emptable-data{

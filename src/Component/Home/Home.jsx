@@ -5,8 +5,8 @@ function Home() {
   return (
     <div className='home-background'>
       <div className='home-btn'>
-        <Link to={"/empform"}>
-          <button className='btn btn-info fw-bold p-3'>Registor Now</button>
+        <Link to={"/employee/create"}>
+          <button className='btn btn-info fw-bold p-3'>Register Now</button>
           </Link>
       </div>
     </div>

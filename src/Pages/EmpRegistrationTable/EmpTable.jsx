@@ -140,7 +140,7 @@ const ReduxTable = () => {
       <div className="d-md-flex border shadow justify-content-between bg-white shadow emptable-div p-3 my-3">
         <div className="d-flex justify-content-center">
           <div>
-            <Link to="/empform">
+            <Link to="/employee/create">
               <Button className="p-button p-button-success  me-2">
                 <FaPlus className="me-2" />
                 <span>New</span>
@@ -289,7 +289,7 @@ const ReduxTable = () => {
             body={(rowData) => (
               <>
                 <div key={rowData.id}></div>
-                <Link to={`/form/${rowData.id}/edit`}>
+                <Link to={`/employee/${rowData.id}/edit`}>
                   <Button
                     onClick={() => handleEditClick(rowData.id)}
                     icon={<FaPencilAlt />}

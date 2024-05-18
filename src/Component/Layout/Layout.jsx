@@ -27,13 +27,13 @@ function Layout() {
             </a>
           </li>
           <li className="nav-items">
-            <a href="/empform" className="nav-links">
-              EmpFrom
+            <a href="/employee/create" className="nav-links">
+             Create Employee
             </a>
           </li>
           <li className="nav-items">
-            <a href="/emptable" className="nav-links">
-              EmpTable
+            <a href="/employee/view" className="nav-links">
+              View Employee
             </a>
           </li>
         </ul>

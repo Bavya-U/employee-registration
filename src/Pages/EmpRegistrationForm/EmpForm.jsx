@@ -48,16 +48,32 @@ const EmpForm = () => {
       setDoj("");
       setEmpId("");
       setGender("");
-      nav("/emptable");
+      resetForm();
+      nav("/employee/view");
     } catch (error) {
       console.error("Error:", error);
     } finally {
       setIsLoading(false);
     }
   };
+
+  const resetForm = () => {
+    setName("");
+    setEmail("");
+    setLastName("");
+    setPhoneNumber("");
+    setAddress("");
+    setJobRol("");
+    setDepartment("");
+    setDoj("");
+    setEmpId("");
+    setGender("");
+  };
   return (
     <div className="container-fluid  empform empform-container">
-      <form onSubmit={handleSubmit} className="Form-card-css w-50 p-3">
+      
+      <form onSubmit={handleSubmit} className="Form-card-css shadow-lg w-50 m-3 p-2">
+      <h4 className="fw-bold text-secondary p-2  ps-5">Create Employee</h4>
         <div
           id="loading-indicator"
           style={{ display: isLoading ? "flex" : "none" }}
@@ -211,14 +227,17 @@ const EmpForm = () => {
               className="form-control empform-inner"
               required
               placeholder="Enter Address"
-              value={address}
+              value={address} 
               onChange={(e) => setAddress(e.target.value)}
-              rows={4}
+              rows={2}
             />
           </div>
         </div>
 
         <div className="empfrom-btn mt-2">
+        <button className="btn btn-secondary me-3" onClick={resetForm} type="submit">
+            Reset
+          </button>
           <button className="btn btn-primary" type="submit">
             Register
           </button>
