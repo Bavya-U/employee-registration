@@ -30,6 +30,8 @@ const ReduxTable = () => {
     deleteTarget: null,
   });
   const [globalSearchText, setGlobalSearchText] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -39,15 +41,32 @@ const ReduxTable = () => {
     navigate(`/form/${id}/edit`);
   };
 
-  const handleDelete = (id) => {
-    dispatch(deleteUser(id));
+
+
+  const handleDelete = async (id) => {
+    setIsLoading(true);
+    try {
+      await dispatch(deleteUser(id));
+    } catch (error) {
+      console.error("Failed to delete user:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
-  const handleDeleteSelected = () => {
-    selectedProducts.forEach((user) => {
-      dispatch(deleteUser(user.id));
-    });
-    setSelectedProducts([]);
+  
+  const handleDeleteSelected = async () => {
+    setIsLoading(true);
+    try {
+      const deletePromises = selectedProducts.map((user) => dispatch(deleteUser(user.id)));
+      await Promise.all(deletePromises);
+      setSelectedProducts([]);
+    } catch (error) {
+      console.error("Failed to delete selected users:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
+  
 
   const filteredData = users
     ? users.filter((row) => {
@@ -109,7 +128,7 @@ const ReduxTable = () => {
   const header = (
     <div className="d-md-flex justify-content-between gap-2">
       <div>
-        <h3>Employee Details</h3>
+        <h3 className="fw-bold">View Employee</h3>
       </div>
 
       <div className="d-md-flex">
@@ -137,6 +156,12 @@ const ReduxTable = () => {
 
   return (
     <div className="text-center col-10 mx-auto  mt-2">
+        <div
+          id="loading-indicator"
+          style={{ display: isLoading ? "flex" : "none" }}
+        >
+          <div className="lds-hourglass"></div>
+        </div>
       <div className="d-md-flex border shadow justify-content-between bg-white shadow emptable-div p-3 my-3">
         <div className="d-flex justify-content-center">
           <div>

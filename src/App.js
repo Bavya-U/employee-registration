@@ -8,6 +8,8 @@ import EmpTable from "./Pages/EmpRegistrationTable/EmpTable";
 import EmpUpdate from "./Pages/EmpRegistrationUpdate/EmpUpdate";
 import "./App.css";
 import Home from "./Component/Home/Home";
+import AppUpload from "../src/upload";
+
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Route path="/employee/view" element={<EmpTable />} />
         <Route path="/edit" element={<EmpUpdate />}></Route>
         <Route path="/employee/:id/edit" element={<EmpUpdate />} />
+        <Route path="/appupload" element={<AppUpload />} />
+
+        
       </Routes>
     </BrowserRouter>
   );
